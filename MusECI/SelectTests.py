@@ -1,14 +1,14 @@
 # Testing select statements
 
-from MusEciOperations import *
-from BasicOperations import line, deriveOnsets
-from MusEciDataStructures import *
-from Shorthands import *
-from MidiWriter import musicToMidi
-from MusicPlayer import MusicPlayer
+from MusECI.MusEciOperations import *
+from MusECI.BasicOperations import line, deriveOnsets
+from MusECI.MusEciDataStructures import *
+from MusECI.Shorthands import *
+from MusECI.MidiWriter import musicToMidi
+from MusECI.MusicPlayer import MusicPlayer
 import pygame as pm
-import MEvent as me
-from Select import *
+import MusECI.MEvent as me
+from MusECI.Select import *
 
 v = Seq([Note(40), Note(60)])
 deriveOnsets(v)

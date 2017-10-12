@@ -2,10 +2,10 @@
 Some examples of using the structures in MusECI to create music.
 '''
 
-import BasicOperations as basic
-from MusEciDataStructures import *
-from MusEciOperations import *
-from MidiWriter import musicToMidi
+import MusECI.BasicOperations as basic
+from MusECI.MusEciDataStructures import *
+from MusECI.MusEciOperations import *
+from MusECI.MidiWriter import musicToMidi
 from copy import deepcopy
 
 # Twinkle Twinkle Little Star

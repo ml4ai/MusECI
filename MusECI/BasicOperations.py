@@ -1,5 +1,5 @@
 from copy import deepcopy
-from MusEciDataStructures import *
+from MusECI.MusEciDataStructures import *
 from random import *
 
 # =================================================================
@@ -615,7 +615,7 @@ def pitchToNote(p, defDur=0.25, defVol=100):
     if p==None:
         return Rest(defDur)
     else:
-        return Note(p, defDur, defVol)
+        return Note(p, defDur, None, defVol)
 
 
 # Convert a list of pitches to a melody using a default note duration. NO ONSET HANDLING (use deriveOnsets)
@@ -637,7 +637,7 @@ def pdPairsToMusic(pds, defVol=100): # NO ONSET HANDLING (use deriveOnsets)
     :param defVol: default volume
     :return: music structure as a melody
     """
-    ns = [Note(x[0], x[1], defVol) for x in pds]
+    ns = [Note(x[0], x[1], None, defVol) for x in pds]
     return line(ns)
 
 def pdPairsToMelody(pds, defVol=100): # This is just a synonym for pdPairsToMusic - NO ONSET HANDLING
@@ -653,7 +653,7 @@ def pdPairsToChord(pds, defVol=100): # NO ONSET HANDLING
     :param defVol: default volume
     :return: music structure as a chord
     """
-    ns = [Note(x[0], x[1], defVol) for x in pds]
+    ns = [Note(x[0], x[1], None, defVol) for x in pds]
     return par(ns)
 
 

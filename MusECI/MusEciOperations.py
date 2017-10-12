@@ -1,6 +1,6 @@
 from copy import deepcopy
-import MusEciDataStructures as ds
-import BasicOperations as basic
+import MusECI.MusEciDataStructures as ds
+import MusECI.BasicOperations as basic
 #import abc # this isn't working when trying to register new classes
 
 class AbstractOpException(Exception):

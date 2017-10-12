@@ -19,12 +19,12 @@ Things not yet supported:
 '''
 
 from mido import MidiFile
-from MusEciDataStructures import Note, Rest, Music, Part, INST, PERC, Instrument
-from BasicOperations import par, line, deriveOnsets
+from MusECI.MusEciDataStructures import Note, Rest, Music, Part, INST, PERC, Instrument
+from MusECI.BasicOperations import par, line, deriveOnsets
 #from MidiConversion import RESOLUTION
-from MEvent import MEvent
-import MusEciOperations as op
-import BasicOperations as basic
+from MusECI.MEvent import MEvent
+import MusECI.MusEciOperations as op
+import MusECI.BasicOperations as basic
 
 def findNoteDuration(pitch, events):
     '''

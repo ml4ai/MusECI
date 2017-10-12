@@ -1,5 +1,5 @@
-from MusEciDataStructures import *
-from BasicOperations import line, par
+from MusECI.MusEciDataStructures import *
+from MusECI.BasicOperations import line, par
 
 class Chunk:
 

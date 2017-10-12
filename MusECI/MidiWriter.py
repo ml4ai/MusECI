@@ -7,9 +7,9 @@
 # the vast majority of MIDI software, since there is no rule in the MIDI spec
 # forbidding it.
 
-import MidiConversion as mc
+import MusECI.MidiConversion as mc
 from copy import deepcopy
-import MEvent as me
+import MusECI.MEvent as me
 
 '''
 > binStrToNum :: String -> Int

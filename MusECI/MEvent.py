@@ -1,6 +1,6 @@
 from copy import deepcopy
-from MusEciDataStructures import INST, Par, Music, Part
-from BasicOperations import dur, mMap
+from MusECI.MusEciDataStructures import INST, Par, Music, Part
+from MusECI.BasicOperations import dur, mMap
 
 # =================================================================
 # EVENT-STYLE REPRESENTATION
@@ -78,7 +78,7 @@ class MEvent:
         self.patch = patch
 
     def __str__(self):
-        return "MEvent({0}, {1}, {2}, {3})".format(str(self.eTime), str(self.pitch), str(self.dur), str(self.patch))
+        return "MEvent({0}, {1}, {2}, {3}, {4})".format(str(self.eTime), str(self.pitch), str(self.dur), str(self.vol), str(self.patch))
 
     def __repr__(self):
         return str(self)

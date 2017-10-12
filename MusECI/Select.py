@@ -1,5 +1,5 @@
-from MusEciDataStructures import *
-import BasicOperations as basic
+from MusECI.MusEciDataStructures import *
+import MusECI.BasicOperations as basic
 import inspect
 
 def compare(queryVal, targetVal):

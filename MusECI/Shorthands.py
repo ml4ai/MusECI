@@ -1,4 +1,4 @@
-from MusEciDataStructures import Note
+from MusECI.MusEciDataStructures import Note
 
 # Capital letters had to be used here to avoid conflict with "as" to mean a-sharp
 

@@ -1,8 +1,8 @@
 
 #import midi  # This is the python-midi library
-from MusEciDataStructures import *
-from BasicOperations import *
-from MEvent import musicToMEvents, musicToMEventByPart
+from MusECI.MusEciDataStructures import *
+from MusECI.BasicOperations import *
+from MusECI.MEvent import musicToMEvents, musicToMEventByPart
 
 def checkMidiCompatible(x):
     """

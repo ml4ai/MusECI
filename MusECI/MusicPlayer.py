@@ -1,6 +1,6 @@
 import pygame.midi as pm
-import MidiConversion as mex
-import MEvent as mev
+import MusECI.MidiConversion as mex
+import MusECI.MEvent as mev
 import time
 
 class MusicPlayer:

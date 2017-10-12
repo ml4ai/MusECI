@@ -1,11 +1,11 @@
-from Chunk import *
-from MusEciDataStructures import *
-from GMInstruments import *
+from MusECI.Chunk import *
+from MusECI.MusEciDataStructures import *
+from MusECI.GMInstruments import *
 from copy import deepcopy
-from MidiReader import *
-from MEvent import MEvent, musicToMEvents
-from BasicOperations import removeZeros, removeZerosOnset, par
-from MidiConversion import splitByPatch
+from MusECI.MidiReader import *
+from MusECI.MEvent import MEvent, musicToMEvents
+from MusECI.BasicOperations import removeZeros, removeZerosOnset, par
+from MusECI.MidiConversion import splitByPatch
 
 
 def extractChord(startChunk, chunks):

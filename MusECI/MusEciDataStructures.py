@@ -4,7 +4,7 @@
 # ===============================================================================
 
 from copy import deepcopy
-from GMInstruments import gmNames  # Bring in a bunch of GM instrument names
+from MusECI.GMInstruments import gmNames  # Bring in a bunch of GM instrument names
 # from GMInstruments import gmNames
 import math
 
@@ -181,11 +181,11 @@ class Mode:
     MINOR_SCALE = [0, 2, 3, 5, 7, 8, 10]
     PENTATONIC_MAJOR_SCALE = [0, 2, 4, 7, 9]
     PENTATONIC_MINOR_SCALE = [0, 3, 5, 7, 10]
-    scaleMap = [(MAJOR, MAJOR_SCALE), (MINOR, MINOR_SCALE), (PENTATONIC_MAJOR, PENTATONIC_MAJOR_SCALE),
-                (PENTATONIC_MINOR, PENTATONIC_MINOR_SCALE)]
+    scaleMap = {MAJOR:MAJOR_SCALE, MINOR:MINOR_SCALE, PENTATONIC_MAJOR:PENTATONIC_MAJOR_SCALE,
+                PENTATONIC_MINOR:PENTATONIC_MINOR_SCALE, CHROMATIC:CHROMATIC_SCALE}
 
     def deriveScale(root, modeName):
-        baseScale = []  # TO-DO: look up using mode name as key
+        baseScale = Mode.scaleMap[modeName]
         return [x + root for x in baseScale]
 
 
@@ -343,7 +343,8 @@ class Part(object):     # Part is not a Par for most instruments
         self.instrument = instrument
 
     def forceMIDICompatible(self, meta=None):
-        self.tree.forceMIDICompatible(meta)
+        #self.tree.forceMIDICompatible(meta) # todo: fix this later
+        self.tree.forceMIDICompatible()
 
     def __str__(self):
         return "Part(Instrument: {0}, {1})".format(self.instrument, self.tree)
@@ -377,7 +378,7 @@ class Tempo:
         self.onset = onset
 
     def __str__(self):
-        return 'Tempo(' + str(self.value) + ')'
+        return 'Tempo(' + str(self.bpm) + ')'
 
     def __repr__(self):
         return str(self)
